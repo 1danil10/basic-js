@@ -15,7 +15,7 @@ module.exports = function getSeason(date) {
     return date;
   }
 
-  let month = date.getMonth();
+  let month = Date.prototype.getMonth.call(date);
   for (let key in seasons) {
     if (seasons[key].includes(month)) {
       return key;
